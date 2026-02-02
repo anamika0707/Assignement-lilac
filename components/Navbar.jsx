@@ -1,12 +1,19 @@
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-6 md:px-16 py-6">
-      <h1 className="text-xl font-medium">Lilac Template</h1>
+    <>
+      {/* Top brown strip */}
+      <div className="h-[6px] bg-[#6b4b2a]" />
 
-      <div className="flex gap-8 text-sm">
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
-      </div>
-    </nav>
+      <nav className="mx-auto max-w-[1400px] px-6 py-4 flex items-center justify-between">
+        <h1 className="text-[22px] font-extrabold text-[#2f3e1f]">
+          Lilac Template
+        </h1>
+
+        <div className="flex gap-14 text-[15px] text-[#2f3e1f]">
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+    </>
   );
 }
