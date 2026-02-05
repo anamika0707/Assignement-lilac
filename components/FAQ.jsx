@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
-export default function FAQ() {
+export default function Faq() {
   const faqs = [
     "Do you take insurance?",
     "What are your rates?",
@@ -9,30 +9,57 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="px-6 md:px-16 py-24">
-      <div className="grid md:grid-cols-2 gap-16">
+    <section className="w-full bg-[#faf5f0] min-h-screen flex items-center">
+      <div className="grid grid-cols-2 w-full">
 
+        {/* LEFT IMAGE */}
         <ScrollReveal>
-          <div className="relative w-105 h-150 rounded-[200px] overflow-hidden">
-            <Image src="/faq.jpg" alt="" fill className="object-cover" />
-          </div>
-        </ScrollReveal>
-
-        <ScrollReveal>
-          <div>
-          <h2 className="text-3xl md:text-4xl font-semibold mb-12">FAQs</h2>
-
-          {faqs.map((q, i) => (
-            <div key={i} className="flex gap-6 border-t border-[#2f3e1f] py-6">
-              <span className="text-xl">+</span>
-              <p>{q}</p>
+          <div className="flex items-center justify-center py-[120px]">
+            <div className="relative w-[420px] aspect-[3/4] overflow-hidden rounded-t-[240px]">
+              <Image
+                src="/faq.jpg"
+                alt="Decorative plant"
+                fill
+                className="object-cover"
+                sizes="420px"
+              />
             </div>
-          ))}
-
-          <div className="border-t border-[#2f3e1f]" />
           </div>
         </ScrollReveal>
 
+        {/* RIGHT FAQ CONTENT */}
+          <div className="flex flex-col justify-center pr-[clamp(40px,6vw,120px)]">
+
+          {/* Heading */}
+          <h2 className="text-[56px] font-medium text-[#2f3e1f] mb-10">
+            FAQs
+          </h2>
+
+          {/* Top Divider */}
+          <div className="border-t border-[#2f3e1f]/40" />
+
+          {/* FAQ LIST */}
+          <div className="mt-6 space-y-6 font-bold">
+            {faqs.map((faq, index) => (
+              <div key={index} className="border-b border-[#2f3e1f]/40 pb-6">
+
+                <div className="flex items-center gap-6">
+                  {/* Plus icon */}
+                  <span className="text-[28px] text-[#2f3e1f] leading-none">
+                    +
+                  </span>
+
+                  {/* Question */}
+                  <p className="text-[32px] leading-[1.3] text-[#2f3e1f]">
+                    {faq}
+                  </p>
+                </div>
+
+              </div>
+            ))}
+          </div>
+
+          </div>
       </div>
     </section>
   );
