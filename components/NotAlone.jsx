@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-export default function NotAlone() {
+export default function NoAlone() {
   return (
     <section className="w-full min-h-[110vh]">
       <div className="grid grid-cols-2 min-h-[110vh]">

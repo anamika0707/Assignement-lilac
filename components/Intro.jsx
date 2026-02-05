@@ -1,39 +1,79 @@
 import Image from "next/image";
-import ScrollReveal from "./ScrollReveal";
+import Link from "next/link";
 
 export default function Intro() {
   return (
-    <section className="px-6 md:px-16 py-24">
-      <div className="grid md:grid-cols-2 gap-16 items-center">
+    <section className="w-full bg-[#e9e4dc] min-h-[120vh] flex items-center">
+      <div className="grid grid-cols-2 w-full min-h-[120vh]">
 
-        <ScrollReveal>
-          <div className="max-w-xl">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-8">
+        {/* LEFT CONTENT */}
+        <div className="flex flex-col justify-center px-[100px] py-[120px]">
+
+          <h2 className="text-[60px] leading-[1.1] font-medium text-[#2f3e1f]">
             Hi, I’m Lilac.
           </h2>
 
-          <p className="text-sm mb-10">
+          <p className="mt-8 max-w-[520px] text-[18px] leading-[1.7] text-[#2f3e1f]">
             I'm committed to providing a safe and supportive environment where
-            we can explore your thoughts, feelings, and behaviors.
+            we can explore your thoughts, feelings, and behaviors. With empathy
+            and guidance, we'll work together to navigate the challenges life
+            throws your way.
           </p>
 
-          <button className="px-6 py-3 border border-[#2f3e1f] text-xs transition hover:bg-[#2f3e1f] hover:text-[#faf7f2]">
-            LET'S CHAT →
-          </button>
+          {/* CENTERED SMALL BUTTON */}
+          <div className="mt-10 flex justify-center">
+            <Link
+              href="/contact"
+              className="
+                inline-block
+                border border-[#2f3e1f]
+                px-6 py-2
+                text-[12px]
+                uppercase tracking-wide
+                text-[#2f3e1f]
+                transition-colors duration-300
+                hover:bg-[#2f3e1f] hover:text-[#e9e4dc]
+              "
+            >
+              Let’s chat →
+            </Link>
           </div>
-        </ScrollReveal>
+        </div>
 
-        <ScrollReveal>
-          <div className="relative flex justify-center md:justify-end">
-          <div className="relative w-105 h-105 rounded-full overflow-hidden">
-            <Image src="/intro-main.jpg" alt="" fill className="object-cover" />
-          </div>
+       {/* RIGHT IMAGES */}
+<div className="relative flex items-center justify-center pr-[80px]">
 
-          <div className="absolute -bottom-10 -right-5 -w-40 -h-40 rounded-full overflow-hidden">
-            <Image src="/intro-small.jpg" alt="" fill className="object-cover" />
-          </div>
-          </div>
-        </ScrollReveal>
+  {/* MAIN ARCHED IMAGE */}
+  <div className="relative w-[450px] h-[650px] overflow-hidden rounded-t-[240px] bg-[#e9e4dc]">
+    <Image
+      src="/intro-main.jpg"
+      alt="Lilac portrait"
+      fill
+      className="object-cover"
+      sizes="400px"
+    />
+  </div>
+
+  {/* SMALL OVERLAPPING CIRCLE */}
+  <div className="
+      absolute
+         bottom-[50px]
+         right-[90px]
+      w-[300px]
+      h-[300px]
+      rounded-full
+      overflow-hidden
+    ">
+    <Image
+      src="/intro-small.jpg"
+      alt="White flowers"
+      fill
+      className="object-cover"
+      sizes="220px"
+    />
+  </div>
+
+</div>
 
       </div>
     </section>
