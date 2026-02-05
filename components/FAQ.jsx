@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 
 export default function FAQ() {
   const faqs = [
@@ -11,11 +12,14 @@ export default function FAQ() {
     <section className="px-6 md:px-16 py-24">
       <div className="grid md:grid-cols-2 gap-16">
 
-        <div className="relative w-105 h-150 rounded-[200px] overflow-hidden">
-          <Image src="/faq.jpg" alt="" fill className="object-cover" />
-        </div>
+        <ScrollReveal>
+          <div className="relative w-105 h-150 rounded-[200px] overflow-hidden">
+            <Image src="/faq.jpg" alt="" fill className="object-cover" />
+          </div>
+        </ScrollReveal>
 
-        <div>
+        <ScrollReveal>
+          <div>
           <h2 className="text-3xl md:text-4xl font-semibold mb-12">FAQs</h2>
 
           {faqs.map((q, i) => (
@@ -26,7 +30,8 @@ export default function FAQ() {
           ))}
 
           <div className="border-t border-[#2f3e1f]" />
-        </div>
+          </div>
+        </ScrollReveal>
 
       </div>
     </section>

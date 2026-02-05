@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 
 const specialties = [
   {
@@ -22,17 +23,19 @@ export default function Specialties() {
   return (
     <section className="bg-[#faf7f2] px-6 md:px-16 py-24">
       {/* Section Heading */}
-      <h2 className="text-center text-3xl md:text-4xl font-semibold mb-16">
-        My Specialties
-      </h2>
+      <ScrollReveal>
+        <h2 className="text-center text-3xl md:text-4xl font-semibold mb-16">
+          My Specialties
+        </h2>
+      </ScrollReveal>
 
       {/* Cards */}
       <div className="grid md:grid-cols-3 gap-10">
         {specialties.map((item, index) => (
-          <div
-            key={index}
-            className="border border-[#2f3e1f] bg-[#e9e5df] p-8 flex flex-col justify-between"
-          >
+          <ScrollReveal key={index}>
+            <div
+              className="border border-[#2f3e1f] bg-[#e9e5df] p-8 flex flex-col justify-between"
+            >
             <div>
               <h3 className="text-lg font-medium mb-4">
                 {item.title}
@@ -54,7 +57,8 @@ export default function Specialties() {
                 />
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollReveal>
         ))}
       </div>
     </section>
