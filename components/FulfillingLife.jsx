@@ -4,29 +4,29 @@ import Link from "next/link";
 export default function FulfillingLife() {
   return (
     <section className="w-full">
-      <div className="grid grid-cols-2 min-h-[720px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 min-h-screen md:min-h-[720px]">
 
         {/* LEFT SIDE */}
-        <div className="bg-[#e9e4dc] flex flex-col justify-between px-[90px] pt-[120px]">
+        <div className="bg-[#e9e4dc] flex flex-col justify-between px-4 sm:px-8 md:px-[90px] pt-8 sm:pt-[120px] py-8 md:py-0">
 
           {/* TOP TEXT */}
           <div className="max-w-[520px]">
-            <h2 className="text-[56px] leading-[1.15] font-medium text-[#2f3e1f]">
+            <h2 className="text-3xl sm:text-4xl md:text-[56px] leading-[1.15] font-medium text-[#2f3e1f]">
               Live a fulfilling life.
             </h2>
 
-            <p className="mt-8 text-[18px] leading-[1.7] text-[#2f3e1f]">
+            <p className="mt-4 sm:mt-8 text-sm sm:text-base md:text-[18px] leading-[1.7] text-[#2f3e1f]">
               Life can be challenging—especially when you're trying to balance
               your personal and professional life.
             </p>
 
-            <p className="mt-6 text-[18px] leading-[1.7] text-[#2f3e1f]">
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-[18px] leading-[1.7] text-[#2f3e1f]">
               It's easy to feel like you're alone in facing these challenges,
               but I want you to know that I'm here to help.
             </p>
           </div>
 
-          <div className="-mx-[90px] border-t border-[#2f3e1f]/40 px-[90px] py-6 text-center  transition-colors duration-300
+          <div className="-mx-4 sm:-mx-8 md:-mx-[90px] border-t border-[#2f3e1f]/40 px-4 sm:px-8 md:px-[90px] py-4 sm:py-6 text-center transition-colors duration-300
                   hover:bg-[#2f6a2f]
                   hover:text-[#fbfbfa]
                   hover:border-[#2f6a2f]   text-[#1f2a12]
@@ -50,7 +50,7 @@ export default function FulfillingLife() {
         </div>
 
         {/* RIGHT IMAGE */}
-        <div className="relative w-full min-h-[720px]">
+        <div className="relative w-full min-h-[300px] sm:min-h-[500px] md:min-h-[720px]">
           <Image
             src="/fulfilling.jpg"
             alt="Lifestyle"

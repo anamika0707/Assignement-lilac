@@ -21,27 +21,27 @@ const specialties = [
 
 export default function Specialties() {
   return (
-    <section className="bg-[#faf7f2] px-6 md:px-16 py-24">
+    <section className="bg-[#faf7f2] px-4 sm:px-6 md:px-16 py-12 sm:py-24">
       {/* Section Heading */}
       <ScrollReveal>
-        <h2 className="text-center text-3xl md:text-4xl font-semibold mb-16">
+        <h2 className="text-center text-3xl sm:text-4xl md:text-5xl font-semibold mb-8 sm:mb-16">
           My Specialties
         </h2>
       </ScrollReveal>
 
       {/* Cards */}
-      <div className="grid md:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10">
         {specialties.map((item, index) => (
           <ScrollReveal key={index}>
             <div
               className="border border-[#2f3e1f] bg-[#e9e5df] p-8 flex flex-col justify-between"
             >
             <div>
-              <h3 className="text-lg font-medium mb-4">
+              <h3 className="text-base sm:text-lg font-medium mb-4">
                 {item.title}
               </h3>
 
-              <p className="text-sm leading-relaxed">
+              <p className="text-xs sm:text-sm leading-relaxed">
                 {item.desc}
               </p>
             </div>
