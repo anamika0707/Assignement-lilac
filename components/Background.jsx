@@ -5,8 +5,8 @@ export default function Background() {
   const items = ["Education", "Licensure", "Certifications"];
 
   return (
-    <section className="w-full bg-[#efe9df] py-[70px] flex justify-center">
-      <div className="w-full max-w-[760px] text-center py-[50px]">
+    <section className="w-full bg-[#e1ddd6] py-[120px] flex justify-center">
+      <div className="w-full max-w-[760px] text-center px-6">
 
         {/* Heading */}
         <ScrollReveal>
